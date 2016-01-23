@@ -1,4 +1,4 @@
-package com.raras.messengerlite.model.entities;
+package com.raras.testing.data.entities;
 
 public class Post {
 
@@ -48,6 +48,6 @@ public class Post {
 
     @Override
     public String toString() {
-        return "title: " + userId + " body: " + body;
+        return "title: " + title + " body: " + body;
     }
 }

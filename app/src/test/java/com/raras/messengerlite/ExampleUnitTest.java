@@ -1,4 +1,4 @@
-package com.raras.messengerlite;
+package com.raras.testing;
 
 import org.junit.Test;
 

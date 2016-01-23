@@ -1,4 +1,4 @@
-package com.raras.messengerlite.utils;
+package com.raras.testing.utils;
 
 public class Log {
     public static final boolean DEBUG = true;

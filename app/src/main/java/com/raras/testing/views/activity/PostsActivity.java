@@ -1,4 +1,4 @@
-package com.raras.messengerlite.views.activity;
+package com.raras.testing.views.activity;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -7,28 +7,25 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
-import com.raras.messengerlite.R;
+import com.raras.testing.R;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class PostsActivity extends BaseActivity {
+public class PostsActivity extends AppCompatActivity {
 
     @Bind(R.id.toolbar) Toolbar mToolbar;
     @Bind(R.id.fab) FloatingActionButton mFab;
 
     @Override
-    public int getLayoutResId() {
-        return R.layout.activity_posts;
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_posts);
+        initUi();
     }
 
-    @Override
-    protected void onCreateActivity(Bundle savedInstanceState) {
 
-    }
-
-    @Override
     protected void initUi() {
         ButterKnife.bind(this);
         setSupportActionBar(mToolbar);

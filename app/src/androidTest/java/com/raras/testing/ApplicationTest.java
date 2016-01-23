@@ -1,4 +1,4 @@
-package com.raras.messengerlite;
+package com.raras.testing;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

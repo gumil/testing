@@ -1,11 +1,10 @@
-package com.raras.messengerlite;
+package com.raras.testing;
 
 import android.app.Application;
 
-import com.facebook.FacebookSdk;
-import com.raras.messengerlite.injectors.component.AppComponent;
-import com.raras.messengerlite.injectors.component.DaggerAppComponent;
-import com.raras.messengerlite.injectors.module.AppModule;
+import com.raras.testing.injectors.component.AppComponent;
+import com.raras.testing.injectors.component.DaggerAppComponent;
+import com.raras.testing.injectors.module.AppModule;
 
 public class TestApplication extends Application{
 
@@ -15,11 +14,6 @@ public class TestApplication extends Application{
     public void onCreate() {
         super.onCreate();
         initInjector();
-        initSdk();
-    }
-
-    private void initSdk() {
-        FacebookSdk.sdkInitialize(this);
     }
 
     private void initInjector() {

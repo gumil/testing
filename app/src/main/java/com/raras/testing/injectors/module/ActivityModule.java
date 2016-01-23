@@ -1,8 +1,8 @@
-package com.raras.messengerlite.injectors.module;
+package com.raras.testing.injectors.module;
 
 import android.content.Context;
 
-import com.raras.messengerlite.injectors.Activity;
+import com.raras.testing.injectors.Activity;
 
 import dagger.Module;
 import dagger.Provides;

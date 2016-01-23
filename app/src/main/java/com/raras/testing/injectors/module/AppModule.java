@@ -1,6 +1,8 @@
-package com.raras.messengerlite.injectors.module;
+package com.raras.testing.injectors.module;
 
-import com.raras.messengerlite.TestApplication;
+import com.raras.testing.TestApplication;
+import com.raras.testing.data.rest.Repository;
+import com.raras.testing.data.rest.RestDataSource;
 
 import javax.inject.Singleton;
 
@@ -19,5 +21,10 @@ public class AppModule {
     @Provides @Singleton
     TestApplication provideMessengerApplicationContext() {
         return mTestApplication;
+    }
+
+    @Provides @Singleton
+    Repository provideDataRepository(RestDataSource restDataSource) {
+        return restDataSource;
     }
 }

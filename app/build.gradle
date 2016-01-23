@@ -3,6 +3,7 @@ apply plugin: 'com.neenbedankt.android-apt'
 
 def support = "23.1.1"
 def retrofit = "2.0.0-beta3"
+def rxjava = "1.1.0"
 
 android {
     compileSdkVersion 23
@@ -38,8 +39,8 @@ dependencies {
     //support
     compile "com.android.support:appcompat-v7:${support}"
     compile "com.android.support:design:${support}"
+    compile "com.android.support:recyclerview-v7:${support}"
 
-    compile 'com.facebook.android:facebook-android-sdk:4.6.0'
     compile 'com.jakewharton:butterknife:7.0.1'
 
     //dagger
@@ -47,7 +48,12 @@ dependencies {
     compile 'com.google.dagger:dagger:2.0'
     provided 'javax.annotation:jsr250-api:1.0'
 
-    //square
+    //retrofit
     compile "com.squareup.retrofit2:retrofit:${retrofit}"
     compile "com.squareup.retrofit2:converter-gson:${retrofit}"
+    compile "com.squareup.retrofit2:adapter-rxjava:${retrofit}"
+
+    //rx
+    compile "io.reactivex:rxandroid:${rxjava}"
+    compile "io.reactivex:rxjava:${rxjava}"
 }

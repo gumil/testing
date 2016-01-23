@@ -1,4 +1,4 @@
-package com.raras.messengerlite.injectors;
+package com.raras.testing.injectors;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
