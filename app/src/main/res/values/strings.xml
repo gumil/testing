@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Messenger Lite</string>
+    <string name="app_name">Testing</string>
     <string name="title_activity_splash">SplashActivity</string>
     <string name="facebook_app_id">916587578426916</string>
     <string name="title_activity_posts">PostsActivity</string>
