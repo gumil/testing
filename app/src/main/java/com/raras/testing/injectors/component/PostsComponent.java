@@ -3,7 +3,7 @@ package com.raras.testing.injectors.component;
 import com.raras.testing.injectors.Activity;
 import com.raras.testing.injectors.module.ActivityModule;
 import com.raras.testing.injectors.module.PostsModule;
-import com.raras.testing.views.fragment.PostsFragment;
+import com.raras.testing.presentation.views.fragment.PostsFragment;
 
 import dagger.Component;
 

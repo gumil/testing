@@ -1,4 +1,4 @@
-package com.raras.testing.views.fragment;
+package com.raras.testing.presentation.views.fragment;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -15,8 +15,8 @@ import com.raras.testing.domain.GetPostsInteractor;
 import com.raras.testing.injectors.component.DaggerPostsComponent;
 import com.raras.testing.injectors.module.ActivityModule;
 import com.raras.testing.injectors.module.PostsModule;
-import com.raras.testing.data.entities.Post;
-import com.raras.testing.views.adapter.PostsAdapter;
+import com.raras.testing.model.Post;
+import com.raras.testing.presentation.views.adapter.PostsAdapter;
 
 import java.util.List;
 

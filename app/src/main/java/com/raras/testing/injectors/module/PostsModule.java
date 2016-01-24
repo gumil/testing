@@ -2,7 +2,7 @@ package com.raras.testing.injectors.module;
 
 import com.raras.testing.domain.GetPostsInteractor;
 import com.raras.testing.injectors.Activity;
-import com.raras.testing.data.rest.Repository;
+import com.raras.testing.data.Repository;
 
 import dagger.Module;
 import dagger.Provides;

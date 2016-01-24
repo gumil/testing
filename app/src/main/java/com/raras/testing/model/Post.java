@@ -1,4 +1,4 @@
-package com.raras.testing.data.entities;
+package com.raras.testing.model;
 
 public class Post {
 

@@ -1,7 +1,7 @@
 package com.raras.testing.domain;
 
-import com.raras.testing.data.entities.Post;
-import com.raras.testing.data.rest.Repository;
+import com.raras.testing.model.Post;
+import com.raras.testing.data.Repository;
 
 import java.util.List;
 

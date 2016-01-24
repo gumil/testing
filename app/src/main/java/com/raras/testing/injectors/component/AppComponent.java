@@ -2,7 +2,7 @@ package com.raras.testing.injectors.component;
 
 import com.raras.testing.TestApplication;
 import com.raras.testing.injectors.module.AppModule;
-import com.raras.testing.data.rest.Repository;
+import com.raras.testing.data.Repository;
 
 import javax.inject.Singleton;
 

@@ -1,6 +1,6 @@
 package com.raras.testing.data.rest;
 
-import com.raras.testing.data.entities.Post;
+import com.raras.testing.model.Post;
 
 import java.util.List;
 

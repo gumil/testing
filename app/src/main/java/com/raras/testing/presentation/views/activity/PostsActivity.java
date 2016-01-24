@@ -1,4 +1,4 @@
-package com.raras.testing.views.activity;
+package com.raras.testing.presentation.views.activity;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
