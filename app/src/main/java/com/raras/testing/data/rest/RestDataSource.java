@@ -1,6 +1,7 @@
 package com.raras.testing.data.rest;
 
 import com.raras.testing.data.Repository;
+import com.raras.testing.model.Comment;
 import com.raras.testing.model.Post;
 
 import java.util.List;
@@ -19,7 +20,7 @@ public class RestDataSource implements Repository {
     @Inject
     public RestDataSource() {
         Retrofit apiAdapter = new Retrofit.Builder()
-                .baseUrl(TestApi.END_POINT)
+                .baseUrl(TestApi.BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                 .build();
@@ -29,5 +30,10 @@ public class RestDataSource implements Repository {
     @Override
     public Observable<List<Post>> getPostsByUser(int userId) {
         return mTestApi.getPostsByUser(userId);
+    }
+
+    @Override
+    public Observable<List<Comment>> getCommentsById(int postId) {
+        return mTestApi.getCommentsById(postId);
     }
 }
