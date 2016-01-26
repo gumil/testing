@@ -14,17 +14,14 @@ import android.widget.Toast;
 
 import com.raras.testing.R;
 import com.raras.testing.TestApplication;
-import com.raras.testing.domain.GetPostsInteractor;
 import com.raras.testing.injectors.component.DaggerPostsComponent;
 import com.raras.testing.injectors.module.ActivityModule;
 import com.raras.testing.injectors.module.PostsModule;
 import com.raras.testing.model.Post;
 import com.raras.testing.presentation.presenter.PostsListPresenter;
 import com.raras.testing.presentation.viewmodel.LoadListView;
-import com.raras.testing.presentation.viewmodel.PostsListView;
 import com.raras.testing.presentation.views.adapter.PostsAdapter;
 import com.raras.testing.presentation.views.listener.ListItemClickListener;
-import com.raras.testing.utils.Log;
 
 import java.util.List;
 
@@ -33,11 +30,10 @@ import javax.inject.Inject;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import rx.functions.Action1;
 
-public class PostsFragment extends Fragment implements LoadListView<Post> {
+public class PostsListFragment extends Fragment implements LoadListView<Post> {
 
-    private static final String TAG = PostsFragment.class.getSimpleName();
+    private static final String TAG = PostsListFragment.class.getSimpleName();
 
     @Inject
     PostsListPresenter mPostsListPresenter;
@@ -73,7 +69,7 @@ public class PostsFragment extends Fragment implements LoadListView<Post> {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_posts, container, false);
+        View view = inflater.inflate(R.layout.fragment_posts_list, container, false);
         ButterKnife.bind(this, view);
 
         return view;
@@ -100,6 +96,7 @@ public class PostsFragment extends Fragment implements LoadListView<Post> {
                 viewItem(post);
             }
         }));
+        mRecyclerView.scheduleLayoutAnimation();
     }
 
     @Override
