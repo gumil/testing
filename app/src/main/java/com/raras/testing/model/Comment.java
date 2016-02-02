@@ -49,4 +49,8 @@ public class Comment {
         this.body = body;
     }
 
+    @Override
+    public String toString() {
+        return name + " : " + email + "\n" + body;
+    }
 }

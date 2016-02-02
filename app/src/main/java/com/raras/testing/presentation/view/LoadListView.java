@@ -1,6 +1,4 @@
-package com.raras.testing.presentation.viewmodel;
-
-import com.raras.testing.model.Post;
+package com.raras.testing.presentation.view;
 
 import java.util.List;
 
@@ -10,7 +8,7 @@ public interface LoadListView<T> extends BaseView {
 
     void hideLoading();
 
-    void showError(String message);
+    void showError();
 
     void renderList(List<T> list);
 

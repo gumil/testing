@@ -1,4 +1,4 @@
-package com.raras.testing.presentation.views.listener;
+package com.raras.testing.presentation.ui.listener;
 
 public interface ListItemClickListener<T> {
     void onItemClick(T t);

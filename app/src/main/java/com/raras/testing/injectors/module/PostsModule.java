@@ -1,7 +1,7 @@
 package com.raras.testing.injectors.module;
 
 import com.raras.testing.domain.GetPostsInteractor;
-import com.raras.testing.injectors.Activity;
+import com.raras.testing.injectors.PerActivity;
 import com.raras.testing.data.Repository;
 
 import dagger.Module;
@@ -16,7 +16,7 @@ public class PostsModule {
         mUserId = userId;
     }
 
-    @Provides @Activity
+    @Provides @PerActivity
     GetPostsInteractor provideGetPostsInteractor(Repository repository) {
         return new GetPostsInteractor(repository, mUserId);
     }

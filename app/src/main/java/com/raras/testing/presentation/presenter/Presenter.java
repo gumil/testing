@@ -1,6 +1,6 @@
 package com.raras.testing.presentation.presenter;
 
-import com.raras.testing.presentation.viewmodel.BaseView;
+import com.raras.testing.presentation.view.BaseView;
 
 public interface Presenter {
 

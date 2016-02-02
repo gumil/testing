@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".presentation.views.activity.SplashActivity"
+            android:name=".presentation.ui.activity.SplashActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -22,10 +22,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".presentation.views.activity.PostsListActivity"
+            android:name=".presentation.ui.activity.PostsListActivity"
             android:label="@string/title_activity_posts"
             android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".presentation.views.activity.PostDetailActivity">
+        <activity
+            android:name=".presentation.ui.activity.PostDetailActivity"
+            android:theme="@style/AppTheme.NoActionBar">
         </activity>
     </application>
 

@@ -2,7 +2,7 @@
              xmlns:tools="http://schemas.android.com/tools"
              android:layout_width="match_parent"
              android:layout_height="match_parent"
-             tools:context=".presentation.views.fragment.PostsListFragment"
+             tools:context=".presentation.ui.fragment.PostsListFragment"
              tools:showIn="@layout/activity_posts_list">
 
     <android.support.v7.widget.RecyclerView
@@ -10,7 +10,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="gone"/>
-
 
     <TextView
         android:id="@+id/posts_text"

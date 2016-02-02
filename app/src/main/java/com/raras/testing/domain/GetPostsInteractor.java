@@ -1,17 +1,15 @@
 package com.raras.testing.domain;
 
-import com.raras.testing.model.Post;
 import com.raras.testing.data.Repository;
+import com.raras.testing.model.Post;
 
 import java.util.List;
 
 import javax.inject.Inject;
 
 import rx.Observable;
-import rx.android.schedulers.AndroidSchedulers;
-import rx.schedulers.Schedulers;
 
-public class GetPostsInteractor implements Interactor<List<Post>> {
+public class GetPostsInteractor extends Interactor<List<Post>> {
 
     private final Repository mRepository;
     private final int mUserId;
@@ -23,9 +21,7 @@ public class GetPostsInteractor implements Interactor<List<Post>> {
     }
 
     @Override
-    public Observable<List<Post>> execute() {
-        return mRepository.getPostsByUser(mUserId)
-                .subscribeOn(Schedulers.newThread())
-                .observeOn(AndroidSchedulers.mainThread());
+    protected Observable<List<Post>> buildUseCaseObservable() {
+        return mRepository.getPostsByUser(mUserId);
     }
 }

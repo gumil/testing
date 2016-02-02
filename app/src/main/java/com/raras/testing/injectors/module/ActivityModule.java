@@ -1,8 +1,9 @@
 package com.raras.testing.injectors.module;
 
+import android.app.Activity;
 import android.content.Context;
 
-import com.raras.testing.injectors.Activity;
+import com.raras.testing.injectors.PerActivity;
 
 import dagger.Module;
 import dagger.Provides;
@@ -10,15 +11,15 @@ import dagger.Provides;
 @Module
 public class ActivityModule {
 
-    private final Context mContext;
+    private final Activity mActivity;
 
-    public ActivityModule(Context context) {
-        mContext = context;
+    public ActivityModule(Activity activity) {
+        mActivity = activity;
     }
 
     @Provides
-    @Activity
-    Context provideActivityContext() {
-        return mContext;
+    @PerActivity
+    Activity provideActivityContext() {
+        return mActivity;
     }
 }

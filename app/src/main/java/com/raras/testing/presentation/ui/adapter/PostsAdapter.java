@@ -1,4 +1,4 @@
-package com.raras.testing.presentation.views.adapter;
+package com.raras.testing.presentation.ui.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -6,7 +6,7 @@ import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
 import com.raras.testing.model.Post;
-import com.raras.testing.presentation.views.listener.ListItemClickListener;
+import com.raras.testing.presentation.ui.listener.ListItemClickListener;
 
 import java.util.List;
 
@@ -37,5 +37,6 @@ public class PostsAdapter extends RecyclerView.Adapter<PostViewHolder> {
     public int getItemCount() {
         return mPosts.size();
     }
+
 
 }

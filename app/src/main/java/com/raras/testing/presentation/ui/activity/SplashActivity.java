@@ -1,4 +1,4 @@
-package com.raras.testing.presentation.views.activity;
+package com.raras.testing.presentation.ui.activity;
 
 import android.content.Intent;
 import android.os.Bundle;

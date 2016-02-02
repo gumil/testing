@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="post"
+            type="com.raras.testing.model.Post"/>
+    </data>
+
+    <android.support.design.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="false">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="?attr/colorPrimary"
+                android:elevation="10dp"
+                android:fitsSystemWindows="true"
+                app:collapsedTitleTextAppearance="@style/ActionBarTextColor"
+                app:expandedTitleTextAppearance="@style/ActionBarTextColor.Expanded"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                app:title="@{post.title}">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="48dp"
+                    android:fitsSystemWindows="true"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    app:layout_collapseMode="parallax">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:gravity="center"
+                        android:text="@{post.title}"
+                        android:textColor="@color/colorTextActionBar"
+                        android:textSize="24sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@{post.body}"
+                        android:textColor="@color/colorTextActionBar"/>
+                </LinearLayout>
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/post_detail_toolbar"
+                    style="@style/Toolbar.WithNavigation"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="?attr/colorPrimary"
+                    app:layout_collapseMode="pin">
+                </android.support.v7.widget.Toolbar>
+            </android.support.design.widget.CollapsingToolbarLayout>
+
+
+        </android.support.design.widget.AppBarLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/post_detail_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/post_detail_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="?attr/colorAccent"
+                android:visibility="gone"/>
+
+            <ProgressBar
+                android:id="@+id/post_detail_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"/>
+        </FrameLayout>
+
+    </android.support.design.widget.CoordinatorLayout>
+</layout>
