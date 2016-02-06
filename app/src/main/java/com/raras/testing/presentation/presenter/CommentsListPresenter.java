@@ -1,6 +1,6 @@
 package com.raras.testing.presentation.presenter;
 
-import com.raras.testing.domain.GetCommentsInteractor;
+import com.raras.testing.domain.Interactor;
 import com.raras.testing.model.Comment;
 import com.raras.testing.presentation.view.BaseView;
 import com.raras.testing.presentation.view.LoadListView;
@@ -13,11 +13,11 @@ import rx.Subscriber;
 
 public class CommentsListPresenter implements BaseListPresenter<Comment> {
 
-    private GetCommentsInteractor mInteractor;
+    private Interactor<List<Comment>> mInteractor;
     private LoadListView<Comment> mView;
 
     @Inject
-    public CommentsListPresenter(GetCommentsInteractor interactor) {
+    public CommentsListPresenter(Interactor interactor) {
         mInteractor = interactor;
     }
 

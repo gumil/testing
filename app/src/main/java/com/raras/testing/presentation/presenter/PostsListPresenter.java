@@ -1,6 +1,6 @@
 package com.raras.testing.presentation.presenter;
 
-import com.raras.testing.domain.GetPostsInteractor;
+import com.raras.testing.domain.Interactor;
 import com.raras.testing.model.Post;
 import com.raras.testing.presentation.view.BaseView;
 import com.raras.testing.presentation.view.LoadListView;
@@ -13,11 +13,11 @@ import rx.Subscriber;
 
 public class PostsListPresenter implements BaseListPresenter<Post> {
 
-    private final GetPostsInteractor mGetPostsInteractor;
+    private final Interactor<List<Post>> mGetPostsInteractor;
     private LoadListView<Post> mPostsListView;
 
     @Inject
-    public PostsListPresenter(GetPostsInteractor getPostsInteractor) {
+    public PostsListPresenter(Interactor getPostsInteractor) {
         mGetPostsInteractor = getPostsInteractor;
     }
 

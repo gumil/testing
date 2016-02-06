@@ -5,4 +5,7 @@
     <string name="title_activity_posts">PostsActivity</string>
     <string name="action_settings">Settings</string>
     <string name="error_message_generic">Oops. Something went wrong!</string>
+    <string name="action_info">Information</string>
+    <string name="action_album">Album</string>
+    <string name="action_tasks">Tasks</string>
 </resources>
